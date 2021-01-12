@@ -52,6 +52,7 @@ a:hover {
   text-align: center;
 }
 .nav {
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: flex;
   justify-content: space-around;
   font-weight: 700;
@@ -63,7 +64,11 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: #999999;
+    font-family: aktiv-grotesk-condensed, sans-serif;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    line-height: 1.5em;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -84,13 +89,21 @@ header {
 }
 /* Color overlay by Abhishek on Codepen */
 
-.interior-page-header {
-  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7));
-}
 
 header {
   line-height: 1.5;
 }
+
+.interior-page-header {
+  display:flex;
+  padding: 60px 20px 20px 20px;
+  min-height: 300px;
+
+}
+.interior-page-header .tag{
+  margin:auto;
+}
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
